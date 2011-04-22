@@ -1,6 +1,9 @@
 set :application, "booksoul"
+set :repository,  "git@github.com:kkxlkkxllb/booksoul.git"
+set :rails_env, :production
 set :deploy_to, "/home/heartme/booksoul"
-set :scm, :none
+
+set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 role :web, "root@173.255.251.67"                          # Your HTTP server, Apache/etc
