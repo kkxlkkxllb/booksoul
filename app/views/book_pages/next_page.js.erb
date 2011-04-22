@@ -1,0 +1,5 @@
+$("#content").html("<%= escape_javascript(render :partial => 'page',:object => @page)%>");
+$(".current_page").html("<%= escape_javascript(render :partial => 'num',:object => @page)%>");
+$('.hide a').focus();
+$("#content").show("slide",{ direction: "right" });
+KE.html('chat', '');

@@ -1,0 +1,19 @@
+%ul.nav.left
+	%li.link= link_to t('book.nav.index'),book_path(@book)
+	%li.link= go_to(t('book.nav.read'),read_bookmark_path)
+	%li.link= go_to(t('book.nav.store'),save_bookmark_path)
+.jump.left
+	= render :partial => 'jump'
+%span.current_page.left.round
+	= render :partial => 'num'
+#loading.left
+	= image_tag("/images/ajaxLoader.gif")
+.login.right
+	- if current_user?
+		= button_to "#{user_name}#{t('user.logout')}",logout_path,:class => 'button'
+	- else
+		= link_to image_tag('/images/icon/sina.png'),auth_path("sina")
+:javascript
+	$(document).ready(function(){
+		$('.button').button();
+		});

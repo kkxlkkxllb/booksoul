@@ -1,0 +1,19 @@
+!!!
+%html
+	%head
+		%title=raw @page_title
+		%meta{'http-equiv' => "content-type", :content => "text/html; charset=UTF-8"}
+		%meta{'name' => "description", :content => "#{@meta_description}"}
+		%meta{'name' => "keywords", :content => "#{@meta_keywords}"}
+		= stylesheet_link_tag 'base','jquery-ui-1.8.9.custom'
+		= javascript_include_tag :defaults
+		= yield :head
+		= csrf_meta_tag
+		= render :partial => 'shared/google_analytics'
+	%body
+		%nav.tool
+			= yield :nav
+		%section
+			= yield
+		%footer
+			= yield :foot

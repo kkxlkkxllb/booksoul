@@ -1,0 +1,18 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Book: create, read, update, delete, generate
+  BookPage: create, read, update, delete
+  Comment: create, read, update, delete
+  KindeditorImage: create, read, update, delete
+  Upload: create, read, update, delete
+  User: create, read, update, delete, follow
+author:
+  Book: create, read, update
+  BookPage: create, read, update, delete
+  Comment: read
+  KindeditorImage: read
+  Upload: read
+  User: read, follow

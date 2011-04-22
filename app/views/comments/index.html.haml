@@ -1,0 +1,28 @@
+- content_for :head do
+	= javascript_include_tag 'jquery.validate.min','messages_cn','ajaxload'
+	= kindeditor_javacript_include_tag
+	= stylesheet_link_tag 'comments','topics'
+- content_for :nav do
+	= render :partial => 'shared/nav'
+#say
+	= link_to t('comment.new'),"#chat_new"
+#chat_list
+	= render :partial => 'comment_list'
+#chat_new.center
+	.chat.left.round.shadow
+		= javascript_include_tag 'upload'
+		= render :file => 'comments/new'
+	.ads2.right.shadow.round
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-9765425002757717";
+		/* Ads */
+		google_ad_slot = "1191914871";
+		google_ad_width = 250;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+- content_for :foot do
+	= render :partial => 'shared/foot'

@@ -1,0 +1,9 @@
+!!!
+%html
+	%head
+		%title 您的评论有回复啦！
+		%meta{'http-equiv' => "content-type", :content => "text/html; charset=UTF-8"}
+	%body
+		%h1= "#{@user.nickname},很高兴地通知您，您在书魂的评论收到了书友的回复!"
+		%p=raw @comment
+		%p= link_to "BookSoul","http://booksoul.heartme.info"

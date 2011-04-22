@@ -1,0 +1,18 @@
+%ul.nav.left
+	= current_page("books",t('title.home'))
+	= current_page("uploads",t('title.upload'))
+	= current_page("comments",t('title.chat'))
+	= current_page("topics",t('title.news'))
+	%li.link= go_to(t('book.nav.read'),read_bookmark_path)
+- unless controller_name == "topics"
+	#loading.left
+		= image_tag("/images/ajaxLoader.gif")
+	.login.right
+		- if current_user?
+			= button_to "#{user_name}#{t('user.logout')}",logout_path,:class => 'button'
+		- else
+			= link_to image_tag('/images/icon/sina.png'),auth_path("sina")
+:javascript
+	$(document).ready(function(){
+		$('.button').button();
+		});

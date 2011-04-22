@@ -1,0 +1,95 @@
+ol{
+	display: table-cell;
+}
+#chat_list{
+	margin-left: 100px;
+	margin-top: 40px;
+	width: 800px;
+}
+#chat_new{
+	width: 820px;
+	height: 320px;
+	margin-top: 5px;
+	position: relative;
+	z-index: 100;
+}
+#say{
+	position: fixed;
+	top: 30px;
+	left: 0px;
+	-moz-border-radius: 0em 0em 4em 0em;
+	border-radius:  0em 0em 4em 0em;
+	background-color: #424242;
+	padding: 5px 15px 5px 5px;
+}
+.chat{
+	width: 530px;
+	height: 290px;
+	padding: 10px;	
+	background-color: #e2fde3;
+	color: #5e5e5e;
+}
+.ads2{
+	margin-top: 20px;
+	width: 250px;
+	height: 250px;
+}
+.nickname{
+	padding: 6px 14px;
+	background-color: #5e5e5e;
+	color: #fffeff;
+	width: 730px;
+	height: 18px;
+	-moz-border-radius: 4em 1em 4em 1em;
+	border-radius: 4em 1em 4em 1em;
+}
+.one-comment{
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+.img{
+	width: 40px;
+	height: 40px;
+}
+.com{
+	width: 700px;
+	background-color: #fffeff;
+	padding: 10px 20px;
+}
+#head_image{	
+	width: 40px;
+	height: 40px;
+	margin: 5px 5px 30px;
+}
+#name{
+	font-size: 20px;
+	padding: 15px 10px;
+}
+nav.pagination{
+	text-align: center;
+	padding: 5px;
+	font-weight: bold;
+	background-color: rgba(255,254,255,0.5);
+	color: #fffeff;
+	-moz-border-radius: 4em 1em 4em 1em;
+	border-radius: 4em 1em 4em 1em;
+}
+.disable{
+	color: #5e5e5e;
+}
+.hidden{
+	display:none;
+}
+#user{
+	width: 535px;
+}
+#error{
+	width: 130px;
+	height: 50px;
+	color: #ff1e17;
+	padding-top: 5px;
+}
+#nocomment{
+	padding: 6px;
+	background-color: #ffb1a0;
+}

@@ -1,0 +1,6 @@
+- form_for @comment,:url=>new_comment_path,:remote => true,:html=>{:id => "form"} do |f|
+	#user.left
+		= render :partial => 'comments/user',:object => f
+	= f.text_area :content,:id => "chat",:minlength => '3'
+	%br
+	= f.submit t('submit'),:disable_with => t('wait'),:class => 'button'

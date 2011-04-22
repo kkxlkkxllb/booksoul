@@ -1,0 +1,126 @@
+body{
+	background-color: #e5fccb;
+}
+
+#header{
+	margin-top: 50px;
+	width: 1000px;
+}
+#header a{
+	color: #ff7c7b;
+}
+span.author{
+	padding: 2px 5px;
+	color: #fffeff;
+	background-color: #424242;
+}
+#main{
+	margin-top: 15px;
+	width: 1000px;
+}
+#info{
+	width: 600px;
+	padding-bottom: 20px;
+	height: 230px;
+	background-color: #fffeff;
+	padding-top: 20px;
+}
+#ads{
+	width: 160px;
+	height: 600px;
+	margin-left: 20px;
+}
+#art{
+	width: 180px;
+	height: 600px;
+	background-color: #fffeff;
+}
+#comment{
+	width: 600px;
+	margin-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#header a:hover,a:hover{
+	color: #0099f7;
+}
+#share{
+	width: 600px;
+	margin-top: 10px;
+	height: 180px;
+	padding-top: 20px;
+	background-color: #fff9ec;
+}
+.kiss{
+	margin-top: 10px;
+	width: 65px;
+	background-color: #d1fa8b;
+	padding: 8px;
+}
+.book_count{
+	padding-left:15px;
+	width: 555px;
+	height: 110px;
+	padding-top: 15px;
+	margin-left: 15px;
+	background-color: #d4dffb;
+}
+.sub{
+	width: 270px;
+	height: 100px;
+}
+.best_comment{
+	padding: 25px 60px;
+	background-color: #fffeff;
+}
+.img{
+	width: 40px;
+	height: 40px;
+}
+.com{
+	width: 510px;
+	background-color: #ff9e93;
+	padding: 8px 20px;
+}
+.read{
+	margin-left: 300px;	
+}
+.image{
+	width: 137px;
+	height: 200px;
+	padding-left: 20px;
+}
+.info{
+	width: 400px;
+	height: 200px;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+#amazon{
+	width: 160px;
+	height: 90px;
+	padding-left: 10px;
+}
+
+.tag{
+	-moz-border-radius: 4em 1em 4em 1em;
+	border-radius: 4em 1em 4em 1em;
+	background-color: #ffcf86;
+	padding: 2px 8px;
+	color: #0099f7;
+	border-style: solid;
+	border-width: 1px;
+}
+ul.tag_list{
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+ul.tag_list li{
+	float: left;
+	padding: 5px 2px;
+}
+span.tag:hover{
+	background-color: #d1fa8b;
+}

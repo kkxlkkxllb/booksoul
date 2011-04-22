@@ -1,0 +1,5 @@
+$("#nocomment").hide();
+$('.list').append("<%= escape_javascript(render :partial => 'comments/comment',:object=>@comment)%>");
+$('#comment_<%= @comment.id %>').show("blind");
+$('#user').html("<%= escape_javascript(render :partial => 'comments/user')%>");
+KE.html('chat', '');

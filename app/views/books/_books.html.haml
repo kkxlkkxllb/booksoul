@@ -1,0 +1,21 @@
+%table.list
+	%tr
+		%th.say= link_to t('book.nav.rand'),rand_read_path
+		%th= t('book.title')
+		%th= t('book.author')
+		%th= t('book.comcount')
+		%th= t('book.tags')
+	- @books.each do |book|
+		%tr{:class => cycle('c1','c2') }
+			- cache("book_tags/#{book.id}") do
+				%td.text_center.book_image= link_to image_tag(book.image.url(:thumb)),book_path(book)
+				%td.text_center.book_title= link_to book.title,book_path(book)
+				%td.text_center.book_author= book.author
+				%td.text_center.book_count= book.comment_count
+				%td.book_tag
+					%ul.tag_list
+						- book.keywords.each do |tag|
+							%li
+								= link_to tag_path(tag.name),:remote => true do
+									%span.tag= tag.name
+= paginate @books,:remote => true,:window => 2

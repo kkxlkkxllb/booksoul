@@ -1,0 +1,54 @@
+- content_for :head do
+	= stylesheet_link_tag 'book'
+- content_for :nav do
+	= render :partial => 'shared/nav'
+#header.text_center
+	%h1= link_to @book.title,read_path(@book)
+	%span.author.round= @book.author
+#main
+	- cache("book/show/#{@book.id}") do
+		#ads.left
+			= render :partial => 'shared/ads'
+		#art.right
+			#dangdang
+				= render :partial => 'shared/dangbook'
+			#amazon
+				= render :partial => 'shared/amazon'
+		#info.center.round
+			.image.left= image_tag(@book.image.url(:medium))
+			.info.right
+				= @book.info
+			%span.read.round
+				= link_to t('book.read'),read_path(@book)
+		#share.center.round
+			.book_count
+				.sub.left
+					%p= "#{t('book.pagecount')}#{@book.page_count}"
+					%p= "#{t('book.commentcount')}#{@book.comment_count}"
+					%p= render :partial => 'shared/share'
+				.sub.right
+					%ul.tag_list
+						- @book.keywords.each do |tag|
+							%li
+								= link_to "/tag/#{tag.name}" do
+									%span.tag= tag.name
+			= link_to rand_read_path do
+				.kiss.center.shadow.round
+					= t('book.nav.rand')
+	#comment.center
+		- if @comment
+			%span
+				= get_name(@comment.nickname,@comment.homepage)
+				= comment_time(@comment)
+				|
+				= "#{@comment.like}#{t('comment.saylike')}"
+			%table
+				%tr
+					%td
+						.img.shadow= grava(@comment)
+					%td.com.round.shadow=raw @comment.content
+		- else
+			.best_comment.round
+				= t('comment.best')
+- content_for :foot do
+	= render :partial => 'shared/foot'

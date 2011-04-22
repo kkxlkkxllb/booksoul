@@ -1,0 +1,42 @@
+body{
+	background-color: #ade8fc;
+}
+ul{
+	list-style: none;
+}
+ul.pro{
+	list-style: decimal;
+	background-color: #edfcd8;
+}
+.pro li{
+	line-height: 200%;
+}
+h2{
+	color: #424242;
+}
+h2 img{
+	margin-bottom: -8px;
+}
+#show{
+	width: 350px;
+	height: 350px;
+}
+#main{
+	width: 900px;
+	margin-top: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+#logo{
+	width: 128px;
+	height: 128px;
+}
+.content{
+	width: 750px;
+	margin-left: 100px;
+	background-color: #fffeff;
+	padding: 20px;
+	-moz-border-radius: 4em 1em 4em 1em;
+	border-radius: 4em 1em 4em 1em;
+	line-height: 140%;
+}

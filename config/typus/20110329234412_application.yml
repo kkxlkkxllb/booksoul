@@ -1,0 +1,70 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Book:
+  fields:
+    default: title, author, info
+    form: title, author, info, image, keyword_list
+  order_by: 
+  relationships: base_tags, book_pages, comments, keyword_taggings, keywords, tag_taggings, taggings, tags
+  filters: created_at
+  search: title
+  application: BookSoul
+
+BookPage:
+  fields:
+    default: num, content, book_id, book
+    form: num, content, book_id, book
+    options:
+      templates:
+        content: rich_text
+  order_by: 
+  relationships: book, comments
+  filters: created_at
+  search: book_id
+  application: BookSoul
+
+Comment:
+  fields:
+    default: nickname, email, homepage, content, like, book_page_id, book_page
+    form: nickname, email, homepage, content, like, book_page_id, book_page
+  order_by: 
+  relationships: book_page
+  filters: created_at
+  search: email
+  application: BookSoul
+
+KindeditorImage:
+  fields:
+    default: data_file_name
+    form: data_file_name
+  order_by: 
+  relationships: 
+  filters: created_at
+  search: 
+  application: BookSoul
+
+Upload:
+  fields:
+    default: contact, book_file_name
+    form: contact, book
+  order_by: 
+  relationships: 
+  filters: created_at
+  search: 
+  application: BookSoul
+
+User:
+  fields:
+    default: nickname, email, homepage, uid, provider
+    form: nickname, email, homepage, uid, provider
+  order_by: 
+  relationships: 
+  filters: created_at
+  search: email,provider
+  application: BookSoul
+  actions:
+    edit: follow
+  export: csv, xml
+

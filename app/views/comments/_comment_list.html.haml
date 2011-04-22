@@ -1,0 +1,5 @@
+= paginate @comments,:remote => true,:window => 2
+%ol.list
+	= render :partial => 'comment',:collection => @comments
+= paginate @comments,:remote => true,:window => 2
+= javascript_include_tag 'chat'

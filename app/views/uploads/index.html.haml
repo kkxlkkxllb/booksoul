@@ -1,0 +1,42 @@
+- content_for :head do
+	= javascript_include_tag 'jquery.validate.min','messages_cn','upload'
+	= stylesheet_link_tag 'home'
+- content_for :nav do
+	= render :partial => 'shared/nav'
+#header
+	.uploadhead.center
+		%h2= t('title.books.s4')
+		%p= t('title.books.u1')
+		%p= t('title.books.u2')
+#main
+	.upload.center.round.shadow
+		- if flash[:success].nil? && flash[:fail].nil?
+			= form_for :upload,:url => uploading_path,:html=>{:id=>"form",:multipart => true } do |f|
+				%p
+					= f.label(:contact,t('upload.user'))
+					%br
+					= f.text_field :contact,:class=>'required custom'
+				%p
+					= f.label(:book,t('upload.book'))
+					%br
+					= f.file_field :book,:class=>'required custom'
+				%p
+					= f.submit t('submit'),:class=>'button',:disable_with => t('wait')
+		- elsif flash[:fail].nil?
+			= render :partial => 'uploads/success'
+		- else
+			= render :partial => 'uploads/fail'
+	.ads1.center.shadow.round
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-9765425002757717";
+		/* iblog-post */
+		google_ad_slot = "9912072468";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+- content_for :foot do
+	= render :partial => 'shared/foot'

@@ -1,0 +1,10 @@
+- content_for :head do
+	= stylesheet_link_tag 'topics'
+	= javascript_include_tag 'ajaxload'
+- content_for :nav do
+	= render :partial => 'shared/nav'
+#google_form.center
+	%h2.round.shadow.text_center= t('title.books.s6')
+	= render :partial => 'shared/google_search'
+- content_for :foot do
+	= render :partial => 'shared/foot'

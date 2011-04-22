@@ -1,0 +1,31 @@
+- content_for :head do
+	= javascript_include_tag 'jquery.validate.min','messages_cn','ajaxload'
+	= kindeditor_javacript_include_tag
+	= stylesheet_link_tag 'read','comments'
+- content_for :nav do
+	= render :partial => 'book_nav'
+#say
+	= link_to t('comment.new'),"#chat_new"
+#forward_page
+	#last.left
+		= go_to(image_tag('/images/icon/left.png',:id => "l"),last_page_path)
+	#next.right
+		= go_to(image_tag('/images/icon/right.png',:id => "n"),next_page_path)
+#content.center
+	= render :partial => 'page'
+#chat_new.center
+	.chat.left.round.shadow
+		= javascript_include_tag 'upload'
+		= render :file => 'comments/new'
+	.ads2.right.shadow.round
+		<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-9765425002757717";
+		/* Ads */
+		google_ad_slot = "1191914871";
+		google_ad_width = 250;
+		google_ad_height = 250;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>

@@ -1,0 +1,18 @@
+.one-comment{:id => dom_id(comment)}
+	%li.nickname
+		%span.left
+			= get_name(comment.nickname,comment.homepage)
+			= comment_time(comment)
+		%span.right
+			= reply_to(comment.nickname)
+			|		
+			%span{:id => "like_#{comment.id}"}		
+				= like_to(t('comment.like'),comment)
+			%span.hidden{:id => "liked_#{comment.id}"}
+				= label_on(comment)
+	%table.clear
+		%tr
+			%td
+				.img.shadow= grava(comment)
+			%td.com.round.shadow=raw comment.content
+

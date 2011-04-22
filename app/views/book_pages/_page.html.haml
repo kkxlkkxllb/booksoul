@@ -1,0 +1,9 @@
+- cache("page/comments/#{@page.id}") do
+	%span.right.hide
+		= open_to t('title.home'),root_path
+	#book_content.round
+		= simple_format(@page.content)
+	#comment
+		= render :partial => 'book_pages/comments'
+	= javascript_include_tag 'chat'
+	

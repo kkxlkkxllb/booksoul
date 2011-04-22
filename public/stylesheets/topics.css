@@ -1,0 +1,12 @@
+body{
+	background: url(/images/bg/bg6.jpg) repeat fixed;
+	}
+h2{
+	color: #0099f7;
+	background-color: #fef9c3;
+	font-weight: normal;
+}
+#google_form{
+	margin-top: 40px;
+	width: 800px;
+}

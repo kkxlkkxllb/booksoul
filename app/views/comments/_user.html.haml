@@ -1,0 +1,17 @@
+- if current_user?
+	#head_image.shadow.left
+		= image_tag(head_image_url,:width => 40,:height => 40)
+	#name.left
+		= user_name
+- else
+	.left
+		= user.label(:nickname,t('comment.nickname'))
+		= user.text_field :nickname,:size => 12,:value => "",:class=>'required custom',:maxlength => '10',:minlength => '2'
+		%br
+		= user.label(:email,t('comment.email'))
+		= user.text_field :email,:value => "",:size => 30,:class=>'required email custom'
+		%br
+		= user.label(:homepage,t('comment.homepage'))
+		= user.text_field :homepage,:value => "",:class=>'url custom',:size => 30,:maxlength => '50'
+#error.right.hidden
+	= t('error.comment')

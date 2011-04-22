@@ -1,0 +1,51 @@
+body{
+	background: url(/images/bg/bg3.jpg) repeat fixed;
+}
+.jump{
+	margin-top: 3px;
+	margin-left: 15px;
+}
+.current_page{
+	margin-left: 100px;
+	margin-top: 4px;
+	border-style: inset;
+	background-color: #edfccc;
+	color: #000;
+	padding: 2px 3px 1px;
+}
+#content{
+	position: relative;
+	width: 800px;
+	font-size: 18px;
+	padding: 60px 10px 10px;
+	z-index: 100;
+}
+#book_content{
+	line-height: 150%;
+	background-color: rgba(216,252,210,0.78);
+	padding: 10px 50px;
+	margin-bottom: 10px;
+	
+}
+.hide{
+	padding: 10px;
+}
+#comment{
+	width: 800px;
+	font-size: 16px;
+}
+#forward_page{
+	top: 340px;
+	width: 1000px;
+	position: fixed;
+	z-index: 1;
+}
+
+#forward_page a:hover img{
+	opacity:0.8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha( opacity=80 )";
+	-moz-box-shadow:0 0 10px #040307;
+	-webkit-box-shadow:0 0 10px #040307;
+	box-shadow:0 0 10px #040307;
+}

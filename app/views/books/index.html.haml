@@ -1,0 +1,50 @@
+- content_for :head do
+	= javascript_include_tag 'mbScrollable','home','ajaxload'
+	= stylesheet_link_tag 'home'
+- content_for :nav do
+	= render :partial => 'shared/nav'
+#header
+	#controls.left
+		.pageIndex.round
+	#myScroll.right
+		.scrollE1.scroll
+			%h1= t('title.books.s1')
+			%p= t('title.books.c1') 				
+		.scrollE2.scroll
+			%h2= t('title.books.s2')
+			%p= t('title.books.c2')
+		.scrollE3.scroll
+			%h2= t('title.books.s3')
+			%p= t('title.books.c3')
+		.scrollE4.scroll
+			%h2= t('title.books.s4')
+			%p= t('title.books.c4')
+		.scrollE5.scroll
+			%h2= t('title.books.s5')
+			%p= t('title.books.c5')
+#home
+	#tags.left.round
+		%span.title= t('title.books.tags')
+		%ul.tag_list.side
+			- cache('all_book_tags') do
+				- Book.tag_counts_on(:keywords).each do |tag|
+					%li
+						= link_to tag_path(tag.name),:remote => true do
+							%span.tag= tag.name
+		#count.clear.text_center.round
+			= "#{Book.all.count}#{t('title.books.count')}"
+			%br
+			= "#{Comment.book_comment}#{t('title.books.comments')}"
+		%span.title= t('title.friends')
+		#friend.clear
+			%ul.friend
+				= friend_to "Rainbowmark","http://rainbowmark.info"
+				= friend_to "HeArtMe","http://heartme.info"
+				= friend_to "ZARD Music","http://zard.heartme.info"
+				= friend_to "牛博国际","http://www.bullogger.com"
+		#dangbook.shadow
+			= render :partial => 'shared/dangindex'
+	#books.right.round
+		= render :partial => 'books'
+- content_for :foot do
+	= render :partial => 'shared/foot'

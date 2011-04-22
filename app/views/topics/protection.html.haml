@@ -1,0 +1,14 @@
+- content_for :head do
+	= stylesheet_link_tag 'aboutus'
+- content_for :nav do
+	= render :partial => 'shared/nav'
+#main
+	#logo.center
+		= image_tag('/images/icon/book.png')
+	%ul.pro.round
+		%li= t('protection.p1')
+		%li= t('protection.p2')
+		%li= t('protection.p3')
+		%li= t('protection.p4')
+- content_for :foot do
+	= render :partial => 'shared/foot'

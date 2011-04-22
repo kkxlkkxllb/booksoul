@@ -1,0 +1,49 @@
+- content_for :head do
+	= javascript_include_tag 'chat'
+	= stylesheet_link_tag 'aboutus'
+- content_for :nav do
+	%ul.nav.left
+		%li.link= link_to t('about.info'),"#info"
+		%li.link= link_to t('about.sitemap'),"#sitemap"
+		%li.link= link_to t('about.function'),"#guide"
+		%li.link= link_to t('about.work'),"#future"
+		%li.link= link_to t('about.company'),"#company"
+#main.center
+	#logo.center
+		= image_tag('/images/icon/book.png')
+	#info
+		%h2
+			= image_tag('/images/icon/logo.png')
+			= t('about.info')
+		%p.content
+			= t('about.content.info')
+	#sitemap
+		%h2
+			= image_tag('/images/icon/site.png')
+			= t('about.sitemap')
+		%p.content
+			= image_tag('/images/site.png')
+	#guide
+		%h2
+			= image_tag('/images/icon/guide.png')
+			= t('about.function')
+		%ul.content
+			%li= t('about.content.guide.g1')
+			%li= t('about.content.guide.g2')
+			%li= t('about.content.guide.g3')
+			%li= t('about.content.guide.g4')
+	#future
+		%h2
+			= image_tag('/images/icon/future.png')
+			= t('about.work')
+		%p.content
+			= t('about.content.more')
+	#company
+		%h2
+			= image_tag('/images/icon/contact.png')
+			= t('about.company')
+		%p.content
+			= t('about.content.company')
+		#show.center= render :partial => 'sina_me'
+- content_for :foot do
+	= render :partial => 'shared/foot'

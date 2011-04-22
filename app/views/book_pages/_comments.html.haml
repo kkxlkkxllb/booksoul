@@ -1,0 +1,6 @@
+- @comments = @page.comments.order("like desc")
+- if @comments.count == 0
+	#nocomment.text_center.shadow.round
+		= t('comment.nocomment')
+%ol.list
+	= render :partial => 'comments/comment',:collection => @comments
